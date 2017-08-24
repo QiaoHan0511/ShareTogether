@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Share Together</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  </head>
+  <body>
+    <div class="section"></div>
+    <center>
+    <img class="responsive-img" style="width: 200px;" src="images/logo.png" />
+  </center>
+    <div class="container white z-depth-2">
+	<ul class="tabs teal">
+		<li class="tab col s3"><a class="white-text active" href="#login">login</a></li>
+		<li class="tab col s3"><a class="white-text" href="#register">register</a></li>
+	</ul>
+	<div id="login" class="col s12">
+		<form class="col s12" action="loginHandler.php" method="post">
+			<div class="form-container">
+        <div class="section"></div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="email" type="email" name="email" required/>
+						<label for="email">Email</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="password" type="password" name="password" minlength="6" required />
+						<label for="password">Password</label>
+					</div>
+				</div>
+				<br>
+				<center>
+					<button class="btn waves-effect waves-light teal" type="submit"
+          name="btnLogin" id="btnLogin">Login</button>
+					<br>
+					<br>
+					<a href="forgotPassword.php">Forgot password?</a>
+				</center>
+			</div>
+		</form>
+	</div>
+
+	<div id="register" class="col s12">
+		<form class="col s12" action="registerHandler.php" method="post">
+			<div class="form-container">
+        <!-- <div class="row">
+          <div class="input-field col s12">
+              <select class="browser-default" name="university" id="university" required/>
+                <option value="" disabled selected>Select your university.</option>
+                <option value="UTeM">UTeM</option>
+                <option value="UMP">UMP</option>
+                <option value="UMK">UMK</option>
+                <option value="UTHM">UTHM</option>
+                <option value="UTHM">UniMAP</option>
+              </select>
+            </div>
+        </div> -->
+
+        <div class="row">
+					<div class="input-field col s12">
+						<input id="userID" type="text" name="userID" required/>
+						<label>ID</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="email" type="email" name="email" class="validate" required/>
+						<label>Email</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="email-confirm" type="email" name="emailC" class="validate" required/>
+						<label>Email Confirmation</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="password" type="password" name="password" class="validate" minlength="6" required/>
+						<label>Password</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="password-confirm" type="password" name="passwordC" class="validate" minlength="6" required/>
+						<label>Password Confirmation</label>
+					</div>
+				</div>
+				<center>
+					<button class="btn waves-effect waves-light teal" type="submit" name="btnRegister" id="btnRegister">Register</button>
+				</center>
+			</div>
+		</form>
+	</div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  </body>
+</html>
